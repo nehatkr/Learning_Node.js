@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 const path = require("path");
 
@@ -9,6 +10,8 @@ if(!fs.existsSync(dataFolder)){
 
 }
 
+// sync way of writing code
+
 const filePath = path.join(dataFolder,'example.txt');
 fs.writeFileSync(filePath,'Hello from node.js');
 console.log('file created succesfully');
@@ -16,3 +19,7 @@ console.log('file created succesfully');
 
 const readContentFromFile = fs.readFileSync(filePath,'utf8');
 console.log("File Content: ", readContentFromFile);
+
+fs.appendFileSync(filePath, '\n This is the new line added to this file');
+console.log('new content added');
+
