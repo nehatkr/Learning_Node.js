@@ -7,4 +7,3 @@ const names = ['neha', 'rahul', 'shweta', 'rishika'];
 const capitalize = lodash.map(names, lodash.capitalize);
 
 console.log(capitalize);
-
